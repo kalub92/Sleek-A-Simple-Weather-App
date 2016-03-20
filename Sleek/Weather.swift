@@ -15,7 +15,7 @@ class Weather {
     private var _dayOfTheWeek: String!
     private var _date: String!
     private var _timeOfDay: String!
-    private var _currentTemp: String!
+    private var _currentTemp: Double!
     private var _weatherType: String!
     
     private var _weatherURL: String!
@@ -31,7 +31,13 @@ class Weather {
         if _dayOfTheWeek == nil {
             _dayOfTheWeek = ""
         }
-            return _dayOfTheWeek
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let dayOfWeekString = dateFormatter.stringFromDate(NSDate())
+        _dayOfTheWeek = "\(dayOfWeekString.uppercaseString)"
+        print(_dayOfTheWeek)
+        return _dayOfTheWeek
         }
 
     
@@ -39,6 +45,13 @@ class Weather {
         if _date == nil {
             _date = ""
         }
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        dateFormatter.timeStyle = .NoStyle
+        let currentDate = dateFormatter.stringFromDate(NSDate())
+        _date = "\(currentDate.uppercaseString)"
+        print(_date)
         return _date
         }
 
@@ -46,19 +59,19 @@ class Weather {
         if _timeOfDay == nil {
             _timeOfDay = ""
         }
-//            let date = NSDate()
-//            let calendar = NSCalendar.currentCalendar()
-//            let components = calendar.components([ .Hour, .Minute, .Second], fromDate: date)
-//            let hour = components.hour
-//            let minutes = components.minute
-            
-//            return "\(hour):\(minutes)"
-            return _cityName
+        
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.timeStyle = .ShortStyle
+        let currentTime = timeFormatter.stringFromDate(NSDate())
+        _timeOfDay = "\(currentTime)"
+        print(_date)
+
+            return _timeOfDay
         }
     
-    var currentTemp: String {
+    var currentTemp: Double {
         if _currentTemp == nil {
-            _currentTemp = ""
+            _currentTemp = 0.0
         }
             return _currentTemp
         }
@@ -86,18 +99,28 @@ class Weather {
         
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
-                if let currentTemp = dict["main"] as? String {
-                    self._currentTemp = currentTemp
+                if let main = dict["main"] as? Dictionary<String, AnyObject> {
+                    
+                   if let currentTemp = main["temp"] as? Double {
+                    let kelvinToFarenheitPreDiv = (currentTemp * (9/5) - 459.67)
+                    let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDiv)/10)
+                    self._currentTemp = kelvinToFarenheit
+                    print(self._currentTemp)
+                    }
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] where weather.count > 0 {
+                    
+                    if let weatherName = weather[0]["main"] as? String {
+                        self._weatherType = weatherName
+                        print("Weather Type: \(self._weatherType)")
+                    }
                     
                 }
                 
-                if let weatherType = dict["weather"] as? String {
-                    self._weatherType = weatherType
-                
-                }
-                
-                if let cityName = dict["id"] as? String {
-                    self._cityName = cityName
+                if let cityName = dict["name"] as? String {
+                    self._cityName = cityName.uppercaseString
+                    print("City Name: \(self._cityName)")
                 }
             }
             completed()

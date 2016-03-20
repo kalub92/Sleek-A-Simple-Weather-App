@@ -17,14 +17,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var timeOfDay: UILabel!
     @IBOutlet weak var currentTemp: UILabel!
     
-    var weather: Weather!
+    var weather = Weather()
     
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        cityName.text = "Portland"
         
         weather.downloadWeatherDetails { () -> () in
             self.updateUI()
@@ -37,7 +35,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         dayOfTheWeek.text = weather.dayOfTheWeek
         date.text = weather.date
         timeOfDay.text = weather.timeOfDay
-        currentTemp.text = weather.currentTemp
+        currentTemp.text = "\(weather.currentTemp)"
     }
     
     override func viewDidAppear(animated: Bool) {

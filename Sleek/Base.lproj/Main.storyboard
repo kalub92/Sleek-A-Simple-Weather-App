@@ -17,6 +17,8 @@
             <string>GlacialIndifference-Regular</string>
             <string>GlacialIndifference-Regular</string>
             <string>GlacialIndifference-Regular</string>
+            <string>GlacialIndifference-Regular</string>
+            <string>GlacialIndifference-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -58,70 +60,45 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-pY-ky4">
                                         <rect key="frame" x="20" y="552" width="374" height="21"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKK-YJ-xwo">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FRIDAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeH-7n-zHv">
-                                                <rect key="frame" x="72" y="0.0" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vd-YJ-2Lc">
-                                                <rect key="frame" x="139" y="0.0" width="1" height="21"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRIDAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeH-7n-zHv">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="91g-8V-0nT"/>
-                                                    <constraint firstAttribute="width" constant="1" id="mM5-da-Gam"/>
-                                                    <constraint firstAttribute="width" constant="1" id="olm-WI-fkM"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="v8h-03-j5Z"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="vvx-0n-KPE"/>
+                                                    <constraint firstAttribute="width" constant="100" id="nB0-77-giw"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="91g-8V-0nT"/>
-                                                        <exclude reference="mM5-da-Gam"/>
-                                                        <exclude reference="v8h-03-j5Z"/>
-                                                        <exclude reference="vvx-0n-KPE"/>
-                                                    </mask>
-                                                </variation>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="JUN 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHZ-F4-Q3o">
-                                                <rect key="frame" x="162" y="0.0" width="41" height="21"/>
                                                 <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNY-03-92k">
-                                                <rect key="frame" x="225" y="0.0" width="1" height="21"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-EB-AwS">
+                                                <rect key="frame" x="116" y="0.0" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JUN 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHZ-F4-Q3o">
+                                                <rect key="frame" x="137" y="0.0" width="100" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Gvl-Wa-Q64"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="LmP-cX-N40"/>
-                                                    <constraint firstAttribute="height" constant="21" id="ZcO-Zn-SR1"/>
-                                                    <constraint firstAttribute="width" constant="1" id="cRG-fI-XLn"/>
-                                                    <constraint firstAttribute="width" constant="1" id="hoz-FD-eez"/>
+                                                    <constraint firstAttribute="width" constant="100" id="yMI-pf-xbD"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="Gvl-Wa-Q64"/>
-                                                        <exclude reference="LmP-cX-N40"/>
-                                                        <exclude reference="ZcO-Zn-SR1"/>
-                                                        <exclude reference="hoz-FD-eez"/>
-                                                    </mask>
-                                                </variation>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2:35 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-5H-0Gz">
-                                                <rect key="frame" x="248" y="0.0" width="54" height="21"/>
                                                 <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icI-t5-dcL">
-                                                <rect key="frame" x="324" y="0.0" width="50" height="21"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-ZF-5e6">
+                                                <rect key="frame" x="253" y="0.0" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:35 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-5H-0Gz">
+                                                <rect key="frame" x="274" y="0.0" width="100" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="9o1-Kh-bZk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GlacialIndifference-Regular" family="Glacial Indifference" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="6qc-kr-4m3"/>
