@@ -7,19 +7,56 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var dayOfTheWeek: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var timeOfDay: UILabel!
+    @IBOutlet weak var currentTemp: UILabel!
+    
+    var weather: Weather!
+    
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        cityName.text = "Portland"
+        
+        weather.downloadWeatherDetails { () -> () in
+            self.updateUI()
+        }
+    
+    }
+    
+    func updateUI() {
+        cityName.text = weather.cityName
+        dayOfTheWeek.text = weather.dayOfTheWeek
+        date.text = weather.date
+        timeOfDay.text = weather.timeOfDay
+        currentTemp.text = weather.currentTemp
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        locationAuthStatus()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
-
+    
+    func locationAuthStatus() {
+        
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            //Loads cityName from location
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+    }
 
 }
 

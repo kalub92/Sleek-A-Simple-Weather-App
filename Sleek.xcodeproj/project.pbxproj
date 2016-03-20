@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804CBC8ED563FF1A6131ADEE /* Pods_Sleek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D6F92090C923A5D9B095D4 /* Pods_Sleek.framework */; };
+		FC70CEC91C9E1D3200C71A62 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */; };
+		FC70CECF1C9E233300C71A62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CECE1C9E233300C71A62 /* Constants.swift */; };
+		FC70CED11C9E25E300C71A62 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CED01C9E25E300C71A62 /* Weather.swift */; };
+		FC81BCF01C9E110F008419CF /* GlacialIndifference-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC81BCEE1C9E110F008419CF /* GlacialIndifference-Bold.otf */; };
+		FC81BCF11C9E110F008419CF /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC81BCEF1C9E110F008419CF /* GlacialIndifference-Regular.otf */; };
 		FCD9EDC91C9D6664002D2D7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9EDC81C9D6664002D2D7B /* AppDelegate.swift */; };
 		FCD9EDCB1C9D6664002D2D7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9EDCA1C9D6664002D2D7B /* ViewController.swift */; };
 		FCD9EDCE1C9D6664002D2D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD9EDCC1C9D6664002D2D7B /* Main.storyboard */; };
@@ -15,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		218160266CE4E6677F3290FA /* Pods-Sleek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.debug.xcconfig"; sourceTree = "<group>"; };
+		70057322BA746B7AFE6C6310 /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
+		C1D6F92090C923A5D9B095D4 /* Pods_Sleek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		FC70CECE1C9E233300C71A62 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FC70CED01C9E25E300C71A62 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FC81BCEE1C9E110F008419CF /* GlacialIndifference-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Bold.otf"; sourceTree = "<group>"; };
+		FC81BCEF1C9E110F008419CF /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
 		FCD9EDC51C9D6663002D2D7B /* Sleek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD9EDC81C9D6664002D2D7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD9EDCA1C9D6664002D2D7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +43,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804CBC8ED563FF1A6131ADEE /* Pods_Sleek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3C44745F95DCBFF05BC0B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				218160266CE4E6677F3290FA /* Pods-Sleek.debug.xcconfig */,
+				70057322BA746B7AFE6C6310 /* Pods-Sleek.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6CE1940D46BAA3689A58AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6F92090C923A5D9B095D4 /* Pods_Sleek.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC70CECD1C9E232600C71A62 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FC70CECE1C9E233300C71A62 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		FC81BCF21C9E1113008419CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC81BCEE1C9E110F008419CF /* GlacialIndifference-Bold.otf */,
+				FC81BCEF1C9E110F008419CF /* GlacialIndifference-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		FCD9EDBC1C9D6663002D2D7B = {
 			isa = PBXGroup;
 			children = (
 				FCD9EDC71C9D6664002D2D7B /* Sleek */,
 				FCD9EDC61C9D6663002D2D7B /* Products */,
+				5A3C44745F95DCBFF05BC0B3 /* Pods */,
+				F6CE1940D46BAA3689A58AFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +105,42 @@
 		FCD9EDC71C9D6664002D2D7B /* Sleek */ = {
 			isa = PBXGroup;
 			children = (
+				FC81BCF21C9E1113008419CF /* Resources */,
+				FCD9EDDC1C9D667E002D2D7B /* Model */,
+				FCD9EDDB1C9D667B002D2D7B /* View */,
+				FCD9EDDA1C9D6677002D2D7B /* Controller */,
 				FCD9EDC81C9D6664002D2D7B /* AppDelegate.swift */,
-				FCD9EDCA1C9D6664002D2D7B /* ViewController.swift */,
-				FCD9EDCC1C9D6664002D2D7B /* Main.storyboard */,
+				FC70CECD1C9E232600C71A62 /* Util */,
 				FCD9EDCF1C9D6664002D2D7B /* Assets.xcassets */,
 				FCD9EDD11C9D6664002D2D7B /* LaunchScreen.storyboard */,
 				FCD9EDD41C9D6664002D2D7B /* Info.plist */,
 			);
 			path = Sleek;
+			sourceTree = "<group>";
+		};
+		FCD9EDDA1C9D6677002D2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCD9EDCA1C9D6664002D2D7B /* ViewController.swift */,
+				FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FCD9EDDB1C9D667B002D2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCD9EDCC1C9D6664002D2D7B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FCD9EDDC1C9D667E002D2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC70CED01C9E25E300C71A62 /* Weather.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCD9EDD71C9D6664002D2D7B /* Build configuration list for PBXNativeTarget "Sleek" */;
 			buildPhases = (
+				67E403E3458FEC2CB3DCFD3A /* Check Pods Manifest.lock */,
 				FCD9EDC11C9D6663002D2D7B /* Sources */,
 				FCD9EDC21C9D6663002D2D7B /* Frameworks */,
 				FCD9EDC31C9D6663002D2D7B /* Resources */,
+				22C7E0100206558D617900BE /* Embed Pods Frameworks */,
+				522E04BDACCDBA86A5C391DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,13 +205,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC81BCF01C9E110F008419CF /* GlacialIndifference-Bold.otf in Resources */,
 				FCD9EDD31C9D6664002D2D7B /* LaunchScreen.storyboard in Resources */,
+				FC81BCF11C9E110F008419CF /* GlacialIndifference-Regular.otf in Resources */,
 				FCD9EDD01C9D6664002D2D7B /* Assets.xcassets in Resources */,
 				FCD9EDCE1C9D6664002D2D7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22C7E0100206558D617900BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sleek/Pods-Sleek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		522E04BDACCDBA86A5C391DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sleek/Pods-Sleek-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67E403E3458FEC2CB3DCFD3A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCD9EDC11C9D6663002D2D7B /* Sources */ = {
@@ -138,6 +270,9 @@
 			files = (
 				FCD9EDCB1C9D6664002D2D7B /* ViewController.swift in Sources */,
 				FCD9EDC91C9D6664002D2D7B /* AppDelegate.swift in Sources */,
+				FC70CEC91C9E1D3200C71A62 /* RoundedView.swift in Sources */,
+				FC70CECF1C9E233300C71A62 /* Constants.swift in Sources */,
+				FC70CED11C9E25E300C71A62 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +383,7 @@
 		};
 		FCD9EDD81C9D6664002D2D7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218160266CE4E6677F3290FA /* Pods-Sleek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sleek/Info.plist;
@@ -259,6 +395,7 @@
 		};
 		FCD9EDD91C9D6664002D2D7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70057322BA746B7AFE6C6310 /* Pods-Sleek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sleek/Info.plist;
@@ -287,6 +424,7 @@
 				FCD9EDD91C9D6664002D2D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
