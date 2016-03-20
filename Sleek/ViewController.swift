@@ -38,8 +38,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         currentTemp.text = "\(weather.currentTemp)"
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         locationAuthStatus()
+        weather.downloadWeatherDetails { () -> () in
+            self.updateUI()
+        }
     }
 
     override func prefersStatusBarHidden() -> Bool {
