@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var dayOfTheWeek: UILabel!
@@ -18,16 +19,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var currentTemp: UILabel!
     
     var weather = Weather()
+    var location = CoreLocationController()
     
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        weather.downloadWeatherDetails { () -> () in
+        locationAuthStatus()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        weather.downloadWeatherDetails {
             self.updateUI()
         }
-    
     }
     
     func updateUI() {
@@ -38,13 +45,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         currentTemp.text = "\(weather.currentTemp)"
     }
     
-    override func viewWillAppear(animated: Bool) {
-        locationAuthStatus()
-        weather.downloadWeatherDetails { () -> () in
-            self.updateUI()
-        }
-    }
-
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -58,6 +58,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         
     }
-
+    @IBAction func onReloadPressed(sender: AnyObject) {
+        //code to reload
+    }
 }
+
+
 

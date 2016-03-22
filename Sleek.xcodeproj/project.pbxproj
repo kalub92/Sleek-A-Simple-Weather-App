@@ -39,6 +39,7 @@
 		FC0D3E641C9E5F1100BAAEA8 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D3E471C9E5F1100BAAEA8 /* UnwindSegue.swift */; };
 		FC0D3E661C9E846C00BAAEA8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D3E651C9E846B00BAAEA8 /* SettingsVC.swift */; };
 		FC0D3E681C9E93E000BAAEA8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D3E671C9E93E000BAAEA8 /* RoundedButton.swift */; };
+		FC0D3E6A1C9F590E00BAAEA8 /* CoreLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D3E691C9F590E00BAAEA8 /* CoreLocationController.swift */; };
 		FC70CEC91C9E1D3200C71A62 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */; };
 		FC70CECF1C9E233300C71A62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CECE1C9E233300C71A62 /* Constants.swift */; };
 		FC70CED11C9E25E300C71A62 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70CED01C9E25E300C71A62 /* Weather.swift */; };
@@ -87,6 +88,7 @@
 		FC0D3E471C9E5F1100BAAEA8 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		FC0D3E651C9E846B00BAAEA8 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FC0D3E671C9E93E000BAAEA8 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FC0D3E691C9F590E00BAAEA8 /* CoreLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationController.swift; sourceTree = "<group>"; };
 		FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		FC70CECE1C9E233300C71A62 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC70CED01C9E25E300C71A62 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				FC70CEC81C9E1D3200C71A62 /* RoundedView.swift */,
 				FC0D3E651C9E846B00BAAEA8 /* SettingsVC.swift */,
 				FC0D3E671C9E93E000BAAEA8 /* RoundedButton.swift */,
+				FC0D3E691C9F590E00BAAEA8 /* CoreLocationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				FC0D3E581C9E5F1100BAAEA8 /* Misc.swift in Sources */,
 				FC0D3E4F1C9E5F1100BAAEA8 /* DesignableTabBarController.swift in Sources */,
 				FC0D3E4A1C9E5F1100BAAEA8 /* AutoTextView.swift in Sources */,
+				FC0D3E6A1C9F590E00BAAEA8 /* CoreLocationController.swift in Sources */,
 				FC0D3E511C9E5F1100BAAEA8 /* DesignableTextView.swift in Sources */,
 				FC0D3E5A1C9E5F1100BAAEA8 /* Spring.swift in Sources */,
 				FC0D3E5C1C9E5F1100BAAEA8 /* SpringButton.swift in Sources */,

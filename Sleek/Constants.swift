@@ -7,10 +7,15 @@
 //
 
 import Foundation
+
+    var weather = Weather()
+    var locationController = CoreLocationController()
     
     let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q="
-    let LOCALE = "Portland"
     let APP_ID = "&appid="
+    var LOCALE = "\(locationController.nameOfCity)"
     let API_KEY = "42a1771a0b787bf12e734ada0cfc80cb"
 
 typealias DownloadComplete = () -> ()
+
+typealias DownloadGPS = () -> ()

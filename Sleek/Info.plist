@@ -41,6 +41,8 @@
 		<string>GlacialIndifference-Bold.otf</string>
 		<string>GlacialIndifference-Regular.otf</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is used to bring you the most accurate, up-to-date weather information.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

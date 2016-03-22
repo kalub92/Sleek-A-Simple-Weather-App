@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import UIKit
+import CoreLocation
 
 class Weather {
     private var _cityName: String!
@@ -20,10 +21,15 @@ class Weather {
     
     private var _weatherURL: String!
     
+    var locationManager = CLLocationManager()
+    
+    var locationCont = CoreLocationController()
+    
     var cityName: String {
         if _cityName == nil {
             _cityName = ""
         }
+        print(_cityName)
         return _cityName
     }
     
@@ -39,7 +45,6 @@ class Weather {
         print(_dayOfTheWeek)
         return _dayOfTheWeek
         }
-
     
     var date: String {
         if _date == nil {
@@ -85,18 +90,20 @@ class Weather {
 
     init() {
         
-        _weatherURL = "\(BASE_URL)\(LOCALE)\(APP_ID)\(API_KEY)"
+        
+        let url = "\(BASE_URL)New York\(APP_ID)\(API_KEY)"
+        _weatherURL = url.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        
+        print(_weatherURL)
         
     }
     
     func downloadWeatherDetails(completed: DownloadComplete) {
-        
+
         let url = NSURL(string: _weatherURL)!
         Alamofire.request(.GET, url).responseJSON { response in
             let result = response.result
             
-            print(result.value.debugDescription)
-        
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 if let main = dict["main"] as? Dictionary<String, AnyObject> {
@@ -115,7 +122,6 @@ class Weather {
                         self._weatherType = weatherName
                         print("Weather Type: \(self._weatherType)")
                     }
-                    
                 }
                 
                 if let cityName = dict["name"] as? String {
